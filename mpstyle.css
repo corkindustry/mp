@@ -1,4 +1,7 @@
-.form-group {
+#addform {
   width: 300px;
-  margin: 5px;
+}
+
+.row {
+  padding: 50px;
 }
