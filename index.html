@@ -14,14 +14,13 @@
     <div class="jumbotron"><h1>&nbsp;<span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Music Purchases&nbsp;<span class="glyphicon glyphicon-usd" aria-hidden="true"></span></h1></div>
     <section class="tab" ng-init="tab = 2017">
       <ul class="nav nav-tabs">
-        <li ng-class="{ active:tab === 2017 }"><a href ng-click="tab = 2017">2017</a></li>
-        <li ng-class="{ active:tab === 2016 }"><a href ng-click="tab = 2016">2016</a></li>
-        <li ng-class="{ active:tab === 2015 }"><a href ng-click="tab = 2015">2015</a></li>
-        <li ng-class="{ active:tab === 2014 }"><a href ng-click="tab = 2014">2014</a></li>
+        <li ng-class="{ active:tab === list }"><a href ng-click="tab = list">list</a></li>
+        <li ng-class="{ active:tab === add }"><a href ng-click="tab = add">add</a></li>
+        <li ng-class="{ active:tab === chart }"><a href ng-click="tab = chart">chart</a></li>
       </ul>
     </section>
     <div class="container-fluid">
-      <table class="table table-striped">
+      <table class="table table-striped" ng-show="tab === list">
         <thead>
           <tr>
             <th>date</th>
@@ -35,49 +34,20 @@
           </tr>
         </thead>
         <tbody ng-controller="musicCtrl">
-          <tr ng-show="tab === 2017" ng-repeat="x in Data2017 | orderBy: '-date'">
+          <tr ng-repeat="x in Data | orderBy: '-date'">
             <td>{{ x.date | date }}</td>
             <td>{{ x.artist }}</td>
             <td>{{ x.album }}</td>
             <td>{{ x.label }}</td>
             <td>{{ x.format }}</td>
-            <td>{{ x.place }}</td>
-            <td>{{ x.price | currency }}</td>
-            <td>{{ x.shipping | currency }}</td>
-          </tr>
-          <tr ng-show="tab === 2016" ng-repeat="x in Data2016 | orderBy: '-date'">
-            <td>{{ x.date | date }}</td>
-            <td>{{ x.artist }}</td>
-            <td>{{ x.album }}</td>
-            <td>{{ x.label }}</td>
-            <td>{{ x.format }}</td>
-            <td>{{ x.place }}</td>
-            <td>{{ x.price | currency }}</td>
-            <td>{{ x.shipping | currency }}</td>
-          </tr>
-          <tr ng-show="tab === 2015" ng-repeat="x in Data2015 | orderBy: '-date'">
-            <td>{{ x.date | date }}</td>
-            <td>{{ x.artist }}</td>
-            <td>{{ x.album }}</td>
-            <td>{{ x.label }}</td>
-            <td>{{ x.format }}</td>
-            <td>{{ x.place }}</td>
-            <td>{{ x.price | currency }}</td>
-            <td>{{ x.shipping | currency }}</td>
-          </tr>
-          <tr ng-show="tab === 2014" ng-repeat="x in Data2014 | orderBy: '-date'">
-            <td>{{ x.date | date }}</td>
-            <td>{{ x.artist }}</td>
-            <td>{{ x.album }}</td>
-            <td>{{ x.label }}</td>
-            <td>{{ x.format }}</td>
-            <td>{{ x.discogs }}</td>
             <td>{{ x.place }}</td>
             <td>{{ x.price | currency }}</td>
             <td>{{ x.shipping | currency }}</td>
           </tr>
         </tbody>
       </table>
+      <div ng-show="tab === add">add</div>
+      <div ng-show="tab === chart">chart</div>
     </div>
   </body>
 </html>
