@@ -13,12 +13,17 @@
   <body>
     <div class="jumbotron"><h1>&nbsp;<span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Music Purchases&nbsp;<span class="glyphicon glyphicon-usd" aria-hidden="true"></span></h1></div>
     <div class="container">
-      <form class="form-group">
-        <div>
+      <form>
+        <div class="form-group" width="200px">
+          <label>Date Purchased</label>
           <input class="form-control" type="date" name="date"></input>
+        </div>
+        <div class="form-inline">
           <input class="form-control" type="text" name="artist" placeholder="artist"></input>
           <input class="form-control" type="text" name="album" placeholder="album"></input>
           <input class="form-control" type="text" name="label" placeholder="label"></input>
+        </div>
+        <div class="form-inline">
           <select class="form-control" placeholder="format">
             <option value="Digital">Digital</option>
             <option value="Cassette">Cassette</option>
@@ -33,7 +38,6 @@
             <div class="input-group-addon">$</div>
             <input type="text" class="form-control" name="shipping" placeholder="shipping">
           </div>
-
         </div>
       </form>
     </div>
