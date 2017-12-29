@@ -29,7 +29,6 @@
             <th>album</th>
             <th>label</th>
             <th>format</th>
-            <th>discogs</th>
             <th>place</th>
             <th>price</th>
             <th>shipping</th>
@@ -37,18 +36,11 @@
         </thead>
         <tbody ng-controller="musicCtrl">
           <tr ng-show="tab === 2017" ng-repeat="x in Data2017 | orderBy: '-date'">
-            <td>{{ x.date }}</td>
-            <td>{{ x.artist }}</td>
-            <td>{{ x.album }}</td>
-          </tr>
-          <!--
-          <tr ng-show="tab === 2017" ng-repeat="x in Data2017 | orderBy: '-date'">
             <td>{{ x.date | date }}</td>
             <td>{{ x.artist }}</td>
             <td>{{ x.album }}</td>
             <td>{{ x.label }}</td>
             <td>{{ x.format }}</td>
-            <td>{{ x.discogs }}</td>
             <td>{{ x.place }}</td>
             <td>{{ x.price | currency }}</td>
             <td>{{ x.shipping | currency }}</td>
@@ -59,7 +51,6 @@
             <td>{{ x.album }}</td>
             <td>{{ x.label }}</td>
             <td>{{ x.format }}</td>
-            <td>{{ x.discogs }}</td>
             <td>{{ x.place }}</td>
             <td>{{ x.price | currency }}</td>
             <td>{{ x.shipping | currency }}</td>
@@ -70,7 +61,6 @@
             <td>{{ x.album }}</td>
             <td>{{ x.label }}</td>
             <td>{{ x.format }}</td>
-            <td>{{ x.discogs }}</td>
             <td>{{ x.place }}</td>
             <td>{{ x.price | currency }}</td>
             <td>{{ x.shipping | currency }}</td>
@@ -86,7 +76,6 @@
             <td>{{ x.price | currency }}</td>
             <td>{{ x.shipping | currency }}</td>
           </tr>
-        -->
         </tbody>
       </table>
     </div>
