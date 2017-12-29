@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="jumbotron"><h1>&nbsp;<span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Music Purchases&nbsp;<span class="glyphicon glyphicon-usd" aria-hidden="true"></span></h1></div>
-    <div class="container">
+    <div class="container-fluid" id="addform">
         <div class="row">
           <div class="col-xs-2">
             <input class="form-control" type="date" name="date"></input>
@@ -30,20 +30,28 @@
             <input class="form-control" type="text" name="label" placeholder="label"></input>
           </div>
         </div>
-        <div class="form-group">
-          <select class="form-control" placeholder="format">
-            <option value="Digital">Digital</option>
-            <option value="Cassette">Cassette</option>
-            <option value="LP">LP</option>
-          </select>
-          <input class="form-control" type="text" name="place" placeholder="place"></input>
-          <div class="input-group">
-            <div class="input-group-addon">$</div>
-            <input type="text" class="form-control" name="price" placeholder="price">
+        <div class="row">
+          <div class="col-xs-3">
+            <select class="form-control" placeholder="format">
+              <option value="Digital">Digital</option>
+              <option value="Cassette">Cassette</option>
+              <option value="LP">LP</option>
+            </select>
           </div>
-          <div class="input-group">
-            <div class="input-group-addon">$</div>
-            <input type="text" class="form-control" name="shipping" placeholder="shipping">
+          <div class="col-xs-3">
+            <input class="form-control" type="text" name="place" placeholder="place"></input>
+          </div>
+          <div class="col-xs-3">
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input type="text" class="form-control" name="price" placeholder="price">
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input type="text" class="form-control" name="shipping" placeholder="shipping">
+            </div>
           </div>
         </div>
         <button type="button" class="btn btn-default">Add</button>
