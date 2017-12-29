@@ -12,6 +12,16 @@
   </head>
   <body>
     <div class="jumbotron"><h1>&nbsp;<span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Music Purchases&nbsp;<span class="glyphicon glyphicon-usd" aria-hidden="true"></span></h1></div>
+    <div class="container">
+      <form>
+        <div class="form-inline">
+          <input type="date" name="date"></input>
+          <input type="text" name="artist" placeholder="artist"></input>
+          <input type="text" name="album" placeholder="album"></input>
+        </div>
+      </form>
+    </div>
+
     <div class="container-fluid" ng-controller="musicCtrl">
       <table class="table table-striped">
         <thead>
