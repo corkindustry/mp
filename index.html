@@ -14,9 +14,9 @@
     <div class="jumbotron"><h1>&nbsp;<span class="glyphicon glyphicon-music" aria-hidden="true"></span>&nbsp;Music Purchases&nbsp;<span class="glyphicon glyphicon-usd" aria-hidden="true"></span></h1></div>
     <section class="tab" ng-init="tab = list">
       <ul class="nav nav-tabs">
-        <li ng-class="{ active:tab === list }"><a href ng-click="tab = list">2017</a></li>
-        <li ng-class="{ active:tab === add }"><a href ng-click="tab = add">2016</a></li>
-        <li ng-class="{ active:tab === chart }"><a href ng-click="tab = chart">2015</a></li>
+        <li ng-class="{ active:tab === list }"><a href ng-click="tab = list">list</a></li>
+        <li ng-class="{ active:tab === add }"><a href ng-click="tab = add">add</a></li>
+        <li ng-class="{ active:tab === chart }"><a href ng-click="tab = chart">chart</a></li>
       </ul>
     </section>
     <div class="container-fluid" ng-controller="musicCtrl">
@@ -46,8 +46,9 @@
           </tr>
         </tbody>
       </table>
+      <div ng-show="tab === add">add</div>
+      <div ng-show="tab === chart">chart</div>
     </div>
-    <div ng-show="tab === add">add</div>
-    <div ng-show="tab === chart">chart</div>
+
   </body>
 </html>
